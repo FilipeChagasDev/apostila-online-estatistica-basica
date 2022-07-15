@@ -34,7 +34,6 @@ $$\sum_{i=1}^4 x_i = x_1 + x_2 + x_3 + x_4 = 2 + 0 + 2 + 2 = 6$$
 
 $$\sum_{i=1}^n {u_i}^2 = {u_1}^2 + {u_2}^2 + ... + {u_n}^2$$
 
-
 Algumas propriedades importantes do somatório são:
 
 * $\sum_{i=m}^n a x_i = a\sum_{i=m}^n x_i$ (distributividade)
