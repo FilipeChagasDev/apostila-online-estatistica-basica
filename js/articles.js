@@ -16,13 +16,23 @@ function getArticlesListAsync(callback)
     );
 }
 
-function getArticleBodyAsync(filename, callback)
+function getMarkdownArticleBodyAsync(filename, callback)
 {
     httpGetAsync(getArticleURL(filename), 
         function(markdownText)
         {
             let converter = new showdown.Converter();
             callback(converter.makeHtml(markdownText));
+        }
+    );
+}
+
+function getHTMLArticleBodyAsync(filename, callback)
+{
+    httpGetAsync(getArticleURL(filename), 
+        function(htmlText)
+        {
+            callback(htmlText);
         }
     );
 }

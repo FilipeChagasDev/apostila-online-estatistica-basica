@@ -34,17 +34,42 @@ window.addEventListener('DOMContentLoaded',
         else
         {
             let articleFileName = getURLParam("article");
-            console.log(articleFileName);
+            let articleFormat = getURLParam("format");
+            showArticle(articleFileName, articleFormat);
         }
     }
 );
+
+function showArticle(filename, format)
+{
+    let el = document.getElementById("articleDiv");
+    
+    if(format == "markdown")
+    {
+        getMarkdownArticleBodyAsync(filename,
+            function(htmlText)
+            {
+                el.innerHTML = htmlText;
+            }
+        );
+    }
+    else //format == "html"
+    {
+        getHTMLArticleBodyAsync(filename,
+            function(htmlText)
+            {
+                el.innerHTML = htmlText;
+            }
+        );
+    }
+}
 
 function showDefaultArticle()
 {
     getDefaultArticle(
         function(object)
         {
-            //showArticle(object["title"], object["filename"]);
+            showArticle(object["filename"], object["format"]);
         }
     );
 }
@@ -68,20 +93,20 @@ function getAndAddArticles()
                 //One object {"title":"Title", "filename":"filename.md"} for each article.
                 function(object, index)
                 {
-                    addArticle(object["title"], object["filename"]);
+                    addArticle(object["title"], object["filename"], object["format"]);
                 }
             );
         }
     );
 }
 
-function addArticle(title, filename)
+function addArticle(title, filename, format)
 {
     //Add article to the sidebar
 
     let el = document.createElement("a");
     el.setAttribute("class", "list-group-item list-group-item-action list-group-item-light p-3");
-    el.setAttribute("href", "index.html?article="+filename);
+    el.setAttribute("href", "index.html?article=" + filename + "&format=" + format);
     el.text = title
 
     document.getElementById("list").appendChild(el);

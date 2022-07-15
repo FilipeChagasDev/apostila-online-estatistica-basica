@@ -1,3 +1,4 @@
 [
-    {"title": "Test", "filename":"test.md"}
+    {"title": "0 - Início", "filename": "default.html", "format": "html"},
+    {"title": "Test", "filename":"test.md", "format":"markdown"}
 ]
