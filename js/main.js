@@ -52,6 +52,7 @@ function showArticle(filename, format)
             function(htmlText)
             {
                 el.innerHTML = htmlText;
+                MathJax.typeset();
             }
         );
     }
@@ -61,11 +62,12 @@ function showArticle(filename, format)
             function(htmlText)
             {
                 el.innerHTML = htmlText;
+                MathJax.typeset();
             }
         );
     }
 
-    loadMathJax();
+    
 }
 
 function showDefaultArticle()
@@ -109,9 +111,16 @@ function addArticle(title, filename, format)
     //Add article to the sidebar
 
     let el = document.createElement("a");
-    el.setAttribute("class", "list-group-item list-group-item-action list-group-item-light p-3");
+    //el.setAttribute("class", "list-group-item list-group-item-action list-group-item-light p-3");
+    
+    el.setAttribute("class", "article-item");
     el.setAttribute("href", "index.html?article=" + filename + "&format=" + format);
-    el.text = title
+    el.text = title;
+
+    if(getURLParam("article") === filename)
+    {
+        el.setAttribute("style", "color: white");
+    } 
 
     document.getElementById("list").appendChild(el);
 }
@@ -121,20 +130,5 @@ function getURLParam(param)
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     return urlParams.get(param);
-}
-
-function loadMathJax()
-{
-    let mathJaxScript = document.getElementById("MathJax-script");
-    
-    if(mathJaxScript !== null)
-    {
-        mathJaxScript.remove();
-    }
-
-    mathJaxScript = document.createElement("script");
-    mathJaxScript.setAttribute("id", "MathJax-script");
-    mathJaxScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
-    document.getElementById("myBody").appendChild(mathJaxScript);
 }
 

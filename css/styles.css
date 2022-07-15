@@ -1,15 +1,17 @@
 @charset "UTF-8";
 
-mjx-math {
-    max-width: 100vh;
-    white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: auto;
+.article-item {
+  margin-left: 20px;
+  margin-top: 20px;
+  color: lightgray;
+  text-decoration: none;
 }
 
-p {
-  max-width: 100vh;
+.article-item:hover {
+  cursor: pointer;
+  color: white;
 }
+
 /*!
 * Start Bootstrap - Simple Sidebar v6.0.5 (https://startbootstrap.com/template/simple-sidebar)
 * Copyright 2013-2022 Start Bootstrap
@@ -5089,12 +5091,14 @@ textarea.form-control-lg {
   color: #495057;
   text-align: inherit;
 }
+
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
   color: #495057;
   text-decoration: none;
   background-color: #f8f9fa;
 }
+
 .list-group-item-action:active {
   color: #212529;
   background-color: #e9ecef;

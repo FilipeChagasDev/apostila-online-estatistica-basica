@@ -35,5 +35,3 @@ Algumas propriedades importantes do somatório são:
 * $\sum_{i=m}^n a x_i = a\sum_{i=m}^n x_i$ (distributividade)
 * $( \sum_{i=m}^n x_i ) + ( \sum_{i=m}^n y_i ) = \sum_{i=m}^n (x_i + y_i)$ (associatividade)
 * $( \sum_{i=u}^n x_i )( \sum_{j=v}^m y_j ) = \sum_{i=u}^n\sum_{j=v}^m x_i y_j$ (distributividade/fatoração)
-
-![fa](articles/img/faturamento.jpg)

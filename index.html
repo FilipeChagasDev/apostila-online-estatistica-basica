@@ -21,15 +21,22 @@
         <!-- My Libs -->
         <script type="text/javascript" src="js/request.js"></script>
         <script type="text/javascript" src="js/articles.js"></script>
+
+        <!-- Other imports... -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
     </head>
     <body id="myBody">
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <!-- <div class="sidebar-heading border-bottom bg-light">Capítulos</div> -->
+            <div class="border-end border-dark bg-dark" id="sidebar-wrapper">
+                <!--  list-group-item-action list-group-item-dark -->
+                <!--
+                <div class="sidebar-heading border-bottom border-dark bg-dark" style="height: 55px;"></div>
+                -->
                 <div class="list-group list-group-flush" id="list">
                     <!-- 
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Item</a> 
+                    <a class="article-item">Item</a>    
                     -->
                 </div>
             </div>
@@ -38,9 +45,9 @@
             <div id="page-content-wrapper">
                 
                 <!-- Top navigation-->
-                <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom" style="height: 55px;">
                     <div class="container-fluid">
-                        <button class="btn btn-outline-primary" id="sidebarToggle">Capítulos</button>
+                        <button class="btn btn-outline-light" id="sidebarToggle">Capítulos</button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -61,7 +68,7 @@
                 </nav>
                 
                 <!-- Page content-->
-                <div class="container-fluid" id="articleDiv" style="height: 90vh; overflow-x: scroll; overflow-y: auto">
+                <div class="container-fluid" id="articleDiv" style="padding: 20px; height: 90vh; overflow-x: scroll; overflow-y: auto;">
                     
                 </div>
             </div>
