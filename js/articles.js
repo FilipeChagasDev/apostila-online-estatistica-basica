@@ -21,7 +21,7 @@ function getMarkdownArticleBodyAsync(filename, callback)
     httpGetAsync(getArticleURL(filename), 
         function(markdownText)
         {
-            let converter = new showdown.Converter();
+            let converter = new showdown.Converter({underline: true, mathjax:true});
             callback(converter.makeHtml(markdownText));
         }
     );
