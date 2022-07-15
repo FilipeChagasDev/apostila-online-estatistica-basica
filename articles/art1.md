@@ -18,13 +18,13 @@ $$\sum_{\textbf{índice}=\textbf{índice inicial}}^{\textbf{índice final}} \tex
 Onde
 
 * $\Sigma$ é a letra grega 'Sigma' maiúscula;
-* \textbf{índice} é uma variável usada para enumerar a sequência de valores do somatório. As letras $i$ e $j$ costumam ser usadas como variáveis de índice.
-* \textbf{índice inicial} é o valor inicial da variável de índice.
-* \textbf{índice final} é o valor final da variável de índice.
+* **índice** é uma variável usada para enumerar a sequência de valores do somatório. As letras $i$ e $j$ costumam ser usadas como variáveis de índice.
+* **índice inicial** é o valor inicial da variável de índice.
+* **índice final** é o valor final da variável de índice.
 
 Em um somatório, o valor da variável de índice é incrementado de 1 em 1 até atingir o índice final.
 
-$$\sum_{i=1}^4 i^2 = 1^2 + 2^2 + 3^2 + 4^2$
+$$\sum_{i=1}^4 i^2 = 1^2 + 2^2 + 3^2 + 4^2$$
 
 Neste exemplo, a variável de índice é $i$, o índice inicial é 1, o índice final é 4 e a expressão é $i^2$. Observe que os valores que são atribuídos a $i$ ao longo do somatório são, respectivamente, 1, 2, 3 e 4. 
 
