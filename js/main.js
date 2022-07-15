@@ -14,9 +14,11 @@ window.addEventListener('DOMContentLoaded',
         const sidebarToggle = document.body.querySelector('#sidebarToggle');
         if (sidebarToggle) {
             // Uncomment Below to persist sidebar toggle between refreshes
+            /*
             if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
                 document.body.classList.toggle('sb-sidenav-toggled');
             }
+            */
 
             sidebarToggle.addEventListener('click', event => {
                 event.preventDefault();
@@ -62,6 +64,8 @@ function showArticle(filename, format)
             }
         );
     }
+
+    loadMathJax();
 }
 
 function showDefaultArticle()
@@ -119,4 +123,18 @@ function getURLParam(param)
     return urlParams.get(param);
 }
 
+function loadMathJax()
+{
+    let mathJaxScript = document.getElementById("MathJax-script");
+    
+    if(mathJaxScript !== null)
+    {
+        mathJaxScript.remove();
+    }
+
+    mathJaxScript = document.createElement("script");
+    mathJaxScript.setAttribute("id", "MathJax-script");
+    mathJaxScript.setAttribute("src", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
+    document.getElementById("myBody").appendChild(mathJaxScript);
+}
 
