@@ -23,4 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
+    httpGetAsync("http://jonmiles.github.io/bootstrap-treeview/", text => {
+        console.log(text)
+    });
 });
