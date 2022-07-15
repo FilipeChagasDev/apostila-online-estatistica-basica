@@ -1,2 +1,3 @@
-# apostila-online-estatistica-basica
-Apostila online de estatística básica
+# Apostila online de estatística basica (AOEB)
+
+Em construção
