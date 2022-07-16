@@ -1,6 +1,6 @@
-# 1 - Medidas básicas de tendência central e dispersão
+# Somatório
 
-### 1.1 - Somatório
+**Filipe Chagas Ferraz**
 
 Somatório é a soma de uma sequência de valores. Por exemplo: o somatório da sequência $[1,2,3,4]$ é $1+2+3+4$.
 

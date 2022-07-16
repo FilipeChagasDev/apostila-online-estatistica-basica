@@ -1,4 +1,6 @@
 [
     {"title": "0 - Apresentação", "filename": "default.html", "format": "html"},
-    {"title": "1 - Medidas básicas", "filename":"art1.md", "format":"markdown"}
+    {"title": "1 - Somatório", "filename":"art1.md", "format":"markdown"},
+    {"title": "2 - Tendência central", "filename":"art2.md", "format":"markdown"},
+    {"title": "3 - Dispersão", "filename":"art3.md", "format":"markdown"}
 ]
